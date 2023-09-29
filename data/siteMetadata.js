@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Rossi Meacham',
   author: 'Rossi Meacham',
   headerTitle: 'Mere Musings',
-  description: 'My personal blog where I share my musings',
+  description: 'this ramshackle site',
   snippets: 'Reuseable code snippets collected by Rossi',
   language: 'en-us',
   theme: 'system', // system, dark or light
