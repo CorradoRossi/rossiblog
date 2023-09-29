@@ -18,7 +18,7 @@ export default function Footer() {
           {`•`}
           <div className="mx-1">
             <Link href="https://qod.shakiltech.com/" className="link-underline">
-              Have a good {currentDayName()}!
+              It's {currentDayName()}
             </Link>
           </div>
           {`•`}

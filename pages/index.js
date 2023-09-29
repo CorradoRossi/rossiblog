@@ -24,7 +24,7 @@ export default function Home({ posts }) {
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
           <div className="pt-6">
             <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Hi, I am{' '}
+              Hi I'm{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Rossi</span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
@@ -37,7 +37,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="box"
                 show={true}
-                color="#DE1D8D"
+                color="#774AE0"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
@@ -52,7 +52,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="highlight"
                 show={true}
-                color="#DE1D8D"
+                color="#774AE0"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
