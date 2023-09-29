@@ -471,11 +471,11 @@ export default function PrivacyPolicy() {
             <li>
               By email:{' '}
               <a
-                href="mailto:desaiparth2000@gmail.com"
+                href="mailto:metastash@proton.me"
                 rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
-                desaiparth2000@gmail.com
+                metastash@proton.me
               </a>
             </li>
           </ul>

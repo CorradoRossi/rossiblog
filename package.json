@@ -1,10 +1,10 @@
 {
-  "name": "parth-desai-blog",
+  "name": "rossi-meacham-blog",
   "version": "1.5.6",
   "private": true,
   "author": {
-    "name": "Parth Desai",
-    "email": "desaiparth2000@gmail.com",
+    "name": "Rossi Meacham",
+    "email": "metastash@proton.me",
     "url": "https://musing.vercel.app/"
   },
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pycoder2000/blog.git"
+    "url": "git+https://github.com/CorradoRossi/blog.git"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",

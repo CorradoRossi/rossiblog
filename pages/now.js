@@ -23,7 +23,7 @@ import {
 
 export const getServerSideProps = async () => {
   const response = await fetch(
-    'https://api.openweathermap.org/data/2.5/weather?lat=23.014770&lon=72.526330&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
+    'https://api.openweathermap.org/data/2.5/weather?lat=44.42590&lon=69.0064&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=imperial'
   )
   const data = await response.json()
 
@@ -63,8 +63,8 @@ export default function Now(currentlyReading) {
   }
 
   var year = new Date().getFullYear()
-  var month = new Date().getMonth()
-  var date = new Date().getDate()
+  var month = new Date().getMonth() + 1
+  var date = new Date().getDate() + 1
   var hour = new Date().getHours()
   var minute = new Date().getMinutes()
   var second = new Date().getSeconds()
@@ -77,34 +77,34 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
-  var birthDate = new Date(ParthBirthDate)
+  var RossiBirthDate = '2000-04-16'
+  var birthDate = new Date(RossiBirthDate)
 
-  var ParthAge = year - birthDate.getFullYear()
+  var RossiAge = year - birthDate.getFullYear()
 
-  var ParthMonth = 0
-  if (month >= birthDate.getMonth()) ParthMonth = month - birthDate.getMonth()
+  var RossiMonth = 0
+  if (month >= birthDate.getMonth()) RossiMonth = month - birthDate.getMonth()
   else {
-    ParthAge--
-    ParthMonth = 12 + month - birthDate.getMonth()
+    RossiAge--
+    RossiMonth = 12 + month - birthDate.getMonth()
   }
 
-  var ParthDay = 0
-  if (date >= birthDate.getDate()) ParthDay = date - birthDate.getDate()
+  var RossiDay = 0
+  if (date >= birthDate.getDate()) RossiDay = date - birthDate.getDate()
   else {
-    ParthMonth--
-    ParthDay = 31 + date - birthDate.getDate()
-    if (ParthMonth < 0) {
-      ParthMonth = 11
-      ParthAge--
+    RossiMonth--
+    RossiDay = 31 + date - birthDate.getDate()
+    if (RossiMonth < 0) {
+      RossiMonth = 11
+      RossiAge--
     }
   }
 
   var age = {}
   age = {
-    years: ParthAge,
-    months: ParthMonth,
-    days: ParthDay,
+    years: RossiAge,
+    months: RossiMonth,
+    days: RossiDay,
   }
 
   var ageString = ''
@@ -133,25 +133,22 @@ export default function Now(currentlyReading) {
       <div>
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
-          <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
-          </div>
         </div>
         {/* Misc */}
         <div>
           <div className="flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad, India</span>
+              <span className="ml-2 font-semibold">Location:</span> <span>Belfast, ME</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
                 <a
-                  href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
+                  href="https://weather.com/en-US/weather/today/l/84eb01bd54f063990c086e907e2233225615214f8499b27c4e6c115ff39e7308"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
                 >
-                  {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°C</b>
+                  {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°F</b>
                   {' with '}
                   <span>{weatherDescription}</span>
                 </a>
@@ -177,7 +174,7 @@ export default function Now(currentlyReading) {
           <div className="-my-6 flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Date:</span>{' '}
-              <span>{TodayDate.format('DD/MM/YYYY')}</span>
+              <span>{TodayDate.format('MM/DD/YYYY')}</span>
               <br />
               <span className="ml-2 font-semibold">Time:</span>{' '}
               <span>
@@ -203,8 +200,13 @@ export default function Now(currentlyReading) {
                 )}
               </span>
               <br />
-              <span className="ml-2 font-semibold">Drinking:</span> <span>Coffee</span>
+              <span className="ml-2 font-semibold">Drinking:</span> <span>Seltzer</span>
             </div>
+          </div>
+        </div>
+        <div className="my-2">
+          <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
+            This page was automatically updated @ {month}-{date}-{year} {hour}:{minute}:{second}
           </div>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
@@ -213,12 +215,12 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Data Engineer at{' '}
+            I manage a portfolio of digital assets at{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://www.wgmi.fyi/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture
+              WGMI Capital
             </Link>
             .
           </p>

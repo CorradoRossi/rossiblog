@@ -1,21 +1,21 @@
 const siteMetadata = {
-  title: 'Blog | Parth Desai',
-  author: 'Parth Desai',
+  title: 'Blog | Rossi Meacham',
+  author: 'Rossi Meacham',
   headerTitle: 'Mere Musings',
   description: 'My personal blog where I share my musings',
-  snippets: 'Reuseable code snippets collected by Parth',
+  snippets: 'Reuseable code snippets collected by Rossi',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://musing.vercel.app',
-  siteRepo: 'https://github.com/pycoder2000/blog',
+  siteRepo: 'https://github.com/CorradoRossi/blog',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'desaiparth2000@gmail.com',
-  github: 'https://github.com/pycoder2000',
-  twitter: 'https://twitter.com/_ParthDesai_',
-  linkedin: 'https://www.linkedin.com/in/parth-desai-2bb1b0160/',
-  website: 'https://parthdesai.vercel.app',
+  email: 'metastash@proton.me',
+  github: 'https://github.com/CorradoRossi',
+  twitter: 'https://twitter.com/metastash',
+  linkedin: 'https://www.linkedin.com/in/rossimeacham/',
+  website: 'https://rossimeacham.vercel.app',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
@@ -46,7 +46,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: '_ParthDesai_',
+    twitter: 'metastash',
   },
 }
 
